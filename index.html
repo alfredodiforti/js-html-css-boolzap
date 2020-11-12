@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
     <div id="app" class="container">
         <section class="sidebar">
             <div class="utente">
                 <div class="icon">
-                    <img class="imgclass" src="./img/avatar_io.jpg" alt="utente">
-                    <h4 class="nameclass">Nome Utente</h4>
+                    <img class="imgclass" :src="`./img/avatar${user.avatar}.jpg`" alt="utente">
+                    <h4 class="nameclass">{{user.name}}</h4>
                 </div>
                 <div class="fastoption">
                     <i class="fas fa-circle-notch iconclass"></i>
@@ -35,9 +36,9 @@
                 <input type="text" placeholder="cerca o inizia una nuova chat">
             </div>
             <div class="recentcontact">
-                <div class="box">
-                    <img class="imgclass" src="./img/avatar_1.jpg" alt="michele">
-                    <span class="nameclass">Michele</span>
+                <div v-for='(contatto) in contacts' class="box">
+                    <img class="imgclass" :src="`./img/avatar${contatto.avatar}.jpg`" alt="contatto">
+                    <span class="nameclass">{{ contatto.name }}</span>
 
                 </div>
             </div>
@@ -65,9 +66,9 @@
                 <i class="fas fa-microphone iconclass"></i>
             </div>
         </section>
-        
-
-    </div>
+     </div>
+     <!-- javascript -->
+     <script src="./javascript/main.js"></script>
     
 </body>
 </html>
