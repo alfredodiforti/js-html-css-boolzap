@@ -5,19 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-html-css-boolzap</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
 </head>
 <body>
     <div id="app" class="container">
         <section class="sidebar">
-            <div class="utente"></div>
-            <div class="alertnotifications"></div>
-            <div class="searchat"></div>
+            <div class="utente">
+                <div class="icon">
+                    <img class="imgclass" src="./img/avatar_io.jpg" alt="utente">
+                    <h4 class="nameclass">Nome Utente</h4>
+                </div>
+                <div class="fastoption">
+                    <i class="fas fa-circle-notch iconclass"></i>
+                    <i class="fas fa-comment-alt iconclass"></i>
+                    <i class="fas fa-ellipsis-v iconclass"></i>
+                </div>
+            </div>
+            <div class="alertnotifications">
+                <div class="alerticon"> <i class="fas fa-bell-slash"></i> </div>
+                <div class="alertext">
+                    <span class="nameclass">Ricevi notifiche di nuovi messaggi</span>
+                    <a href="#">attiva notifiche desktop</a>
+                </div>
+            </div>
+            <div class="searchat">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="cerca o inizia una nuova chat">
+            </div>
             <div class="recentcontact"></div>
         </section>
         <section class="main">
-            <div class="actualcontact"></div>
+            <div class="actualcontact">
+                <div class="actualchat">
+                    <div><img class="imgclass" src="./img/avatar_1.jpg" alt="michele">
+                    </div>              
+                 <div class="detail">
+                     <span class="nameclass">Michele</span>
+                     <span class="timechat">Ultimo accesso oggi alle 14:08</span>
+                 </div>           
+                </div>
+                <div class="optionchat">
+                    <i class="fas fa-search iconclass"></i>
+                    <i class="fas fa-paperclip iconclass"></i>
+                    <i class="fas fa-ellipsis-v iconclass"></i>
+                </div>
+            </div>
             <div class="conversation"></div>
-            <div class="inputzone"></div>
+            <div class="inputzone">
+                <i class="far fa-smile iconclass"></i>
+                <input type="text" placeholder="scrivi un messaggio">
+                <i class="fas fa-microphone iconclass"></i>
+            </div>
         </section>
         
 

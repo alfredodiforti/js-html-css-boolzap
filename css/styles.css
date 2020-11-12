@@ -3,6 +3,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 body {
     height: 100vh;
@@ -31,17 +32,88 @@ body {
     flex-direction: column;
     flex-basis: 35%; 
 }
+/* utente */
 .utente {
+    display: flex;
+    justify-content: space-between;
     height: 60px;
     background: #eaeaea;
 }
+.icon {
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.imgclass {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.nameclass {
+    font-weight: 700;
+    font-size: 12px;
+}
+/* fast option */
+.fastoption {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 20%;
+    align-items: center;
+    margin-right: 10px;
+}
+.iconclass {
+    color: #b1b1b1 ;
+    font-size: 20px;
+}
+/* Alert Notification */
 .alertnotifications {
+    display: flex;
+    align-items: center;
     height: 80px;
     background: #8ddbfc;
+    padding-left: 20px;
 }
+.alerticon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.alerticon i {
+    color: #8ddbfc;
+    font-size: 20px;
+}
+.alertext {
+    display: flex;
+    flex-direction: column;
+}
+.alertext a {
+    color: #4f7485;
+    font-size: 11px;
+}
+/* searchat */
 .searchat {
     height: 40px;
     background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.searchat i {
+    position: absolute;
+    left: 40px;
+    color: #b1b1b1;
+}
+.searchat input {
+    flex-basis: 97%;
+    height: 67%;
+    padding-left: 80px;
 }
 .recentcontact {
     flex-grow: 1;
@@ -53,15 +125,56 @@ body {
     flex-direction: column;
     flex-basis: 65%;
 }
+/* barra in alto */
 .actualcontact {
     height: 60px;
     background: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.actualchat {
+    display: flex;
+    align-items: center;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.detail .timechat {
+    font-size: 11px;
+    color: #6b7376;
+}
+.optionchat {
+    flex-basis: 90px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
 .conversation {
     flex-grow: 1;
     background-image: url(../img/default.png);
 }
+/* inputzone */
 .inputzone {
     height: 60px;
     background: #f3eeea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputzone input {
+    flex-grow: 1;
+    height: 65%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+}
+.inputzone i {
+    padding-right: 30px;
+    padding-left: 30px;
+    color: #6b7376;
 }
