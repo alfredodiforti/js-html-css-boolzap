@@ -170,6 +170,50 @@ body {
 .conversation {
     flex-grow: 1;
     background-image: url(../img/default.png);
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.conversation .boxgreen {
+    background: #d5f9ba;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40%;
+    border-radius: 5px;
+    padding: 8px;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    
+}
+.conversation .boxgreen p {
+    align-self: flex-start;
+
+}
+.conversation .boxgreen span {
+    align-self: flex-end;
+    font-size: 10px;
+}
+
+.conversation .boxwhite {
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40%;
+    border-radius: 5px;
+    padding: 8px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.conversation .boxwhite p {
+    align-self: flex-start;
+
+}
+.conversation .boxwhite span {
+    align-self: flex-end;
+    font-size: 10px;
 }
 /* inputzone */
 .inputzone {

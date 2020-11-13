@@ -36,7 +36,7 @@
                 <input type="text" placeholder="cerca o inizia una nuova chat">
             </div>
             <div class="recentcontact">
-                <div v-for='(contatto) in contacts' class="box">
+                <div @click="openchat(indice)" v-for='(contatto,indice) in contacts' class="box">
                     <img class="imgclass" :src="`./img/avatar${contatto.avatar}.jpg`" alt="contatto">
                     <span class="nameclass">{{ contatto.name }}</span>
 
@@ -46,10 +46,10 @@
         <section class="main">
             <div class="actualcontact">
                 <div class="actualchat">
-                    <div><img class="imgclass" src="./img/avatar_1.jpg" alt="michele">
+                    <div><img class="imgclass" :src="'./img/avatar' + contacts[index].avatar + '.jpg'" alt="michele">
                     </div>              
                  <div class="detail">
-                     <span class="nameclass">Michele</span>
+                     <span class="nameclass">{{ contacts[index].name }}</span>
                      <span class="timechat">Ultimo accesso oggi alle 14:08</span>
                  </div>           
                 </div>
@@ -59,7 +59,20 @@
                     <i class="fas fa-ellipsis-v iconclass"></i>
                 </div>
             </div>
-            <div class="conversation"></div>
+            <div class="conversation">
+                <div class="boxgreen">
+                    <p class="nameclass">Hai portato a spasso il cane?</p>
+                    <span>10/01/2020 15:30:55</span>
+                </div>
+                <div class="boxgreen">
+                    <p class="nameclass">Ricordati di dargli da mangiare</p>
+                    <span>10/01/2020 15:30:55</span>
+                </div>
+                <div class="boxwhite">
+                    <p class="nameclass">Tutto fatto!</p>
+                    <span>10/01/2020 15:31:23</span>
+                </div>
+            </div>
             <div class="inputzone">
                 <i class="far fa-smile iconclass"></i>
                 <input type="text" placeholder="scrivi un messaggio">
