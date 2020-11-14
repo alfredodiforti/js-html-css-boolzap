@@ -4,7 +4,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-        index: 0, 
+        index: 0,
         // nostro account
         user: {
             name: 'Nome Utente',

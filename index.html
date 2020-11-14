@@ -59,10 +59,10 @@
                     <i class="fas fa-ellipsis-v iconclass"></i>
                 </div>
             </div>
-            <div class="conversation" v-for='messaggio in contacts[index].messages'>
-                <div class="boxgreen">
-                    <p class="nameclass">{{ contacts[index].messages[1].message}}</p>
-                    <span>10/01/2020 15:30:55</span>
+            <div class="conversation" >
+                <div v-for='messaggio in contacts[index].messages' :class="messaggio.status == 'sent' ? 'boxgreen' : 'boxwhite'">
+                    <p class="nameclass">{{ messaggio.message}}</p>
+                    <span>{{messaggio.date}}</span>
                 </div>
 
             </div>
