@@ -36,7 +36,7 @@
                 <input type="text" placeholder="cerca o inizia una nuova chat">
             </div>
             <div class="recentcontact">
-                <div @click="openchat(indice)" v-for='(contatto,indice) in contacts' class="box">
+                <div @click="openchat(indice)" v-for='(contatto,indice) in contacts' class="box" :class="indice == index ? 'active' : '' ">
                     <img class="imgclass" :src="`./img/avatar${contatto.avatar}.jpg`" alt="contatto">
                     <span class="nameclass">{{ contatto.name }}</span>
 

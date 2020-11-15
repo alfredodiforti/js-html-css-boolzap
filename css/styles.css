@@ -65,6 +65,7 @@ body {
 .iconclass {
     color: #b1b1b1 ;
     font-size: 20px;
+    cursor: pointer;
 }
 /* Alert Notification */
 .alertnotifications {
@@ -119,6 +120,7 @@ body {
 .recentcontact {
     flex-grow: 1;
     background: white;
+    overflow-y: auto;
 }
 .recentcontact .box {
     width: 100%;
@@ -126,6 +128,10 @@ body {
     border-bottom: 1px solid #f5f5f5 ;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+.active {
+    background-color: #e9ebeb;
 }
 .box img {
     width: 50px;
@@ -174,6 +180,7 @@ body {
     flex-direction: column;
     padding-left: 70px;
     padding-right: 70px;
+    overflow-y: auto;
 }
 .conversation .boxgreen {
     background: #d5f9ba;
