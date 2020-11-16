@@ -5,6 +5,7 @@ var app = new Vue({
     el: '#app',
     data: {
         index: 0,
+        message: '',
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -101,6 +102,17 @@ var app = new Vue({
         openchat(indice) {
             this.index = indice;
         },
+        invia() {
+            if (this.message.trim() !== '') {
+                this.contacts[this.index].messages.push({
+                    date: '20/03/2020 16:30:00',
+                    message:  this.message ,
+                    status: 'sent'
+                },
+                );
+                this.message = '';                
+        }
 
     }
+}
 });

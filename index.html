@@ -68,7 +68,7 @@
             </div>
             <div class="inputzone">
                 <i class="far fa-smile iconclass"></i>
-                <input type="text" placeholder="scrivi un messaggio">
+                <input type="text" placeholder="scrivi un messaggio" v-model="message" @keyup.enter="invia()">
                 <i class="fas fa-microphone iconclass"></i>
             </div>
         </section>
