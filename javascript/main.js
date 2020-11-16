@@ -6,11 +6,6 @@ var app = new Vue({
     data: {
         index: 0,
         message: '',
-        risp: {
-            date: this.newdate,
-                message:'ciao' ,
-                status:'received',
-         },     
         newdate: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         // nostro account
         user: {
@@ -108,30 +103,29 @@ var app = new Vue({
         openchat(indice) {
             this.index = indice;
         },
-        risposta() {
-            if (this.message.trim() !== '') {
-                this.contacts[this.index].messages.push({
-                    date: this.newdate,
-                        message:'ciao' ,
-                        status:'received',
-                 }); 
-                }
-            },
-            
+
         invia() {
             if (this.message.trim() !== '') {
-                this.contacts[this.index].messages.push({
+                this.contacts[this.index].messages.push(
+                    {
                     date: this.newdate,
                     message:  this.message ,
                     status: 'sent'
                 },
-                setTimeout(this.risposta,1000)
                 );
                 this.message = '';    
+                setTimeout(this.risposta,1000);
         }
     },
-       
-        
+    risposta() {
+        this.contacts[this.index].messages.push(
+            {
+                date: this.newdate,
+                    message:'Buonasera Paolo :)' ,
+                    status:'received',
+             },
+        )
+    }       
     
 }
 });
