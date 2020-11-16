@@ -6,6 +6,12 @@ var app = new Vue({
     data: {
         index: 0,
         message: '',
+        risp: {
+            date: this.newdate,
+                message:'ciao' ,
+                status:'received',
+         },     
+        newdate: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -102,17 +108,30 @@ var app = new Vue({
         openchat(indice) {
             this.index = indice;
         },
+        risposta() {
+            if (this.message.trim() !== '') {
+                this.contacts[this.index].messages.push({
+                    date: this.newdate,
+                        message:'ciao' ,
+                        status:'received',
+                 }); 
+                }
+            },
+            
         invia() {
             if (this.message.trim() !== '') {
                 this.contacts[this.index].messages.push({
-                    date: '20/03/2020 16:30:00',
+                    date: this.newdate,
                     message:  this.message ,
                     status: 'sent'
                 },
+                setTimeout(this.risposta,1000)
                 );
-                this.message = '';                
+                this.message = '';    
         }
-
-    }
+    },
+       
+        
+    
 }
 });
