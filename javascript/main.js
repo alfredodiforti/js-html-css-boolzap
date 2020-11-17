@@ -6,7 +6,6 @@ var app = new Vue({
     data: {
         index: 0,
         message: '',
-        newdate: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -108,7 +107,7 @@ var app = new Vue({
             if (this.message.trim() !== '') {
                 this.contacts[this.index].messages.push(
                     {
-                    date: this.newdate,
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     message:  this.message ,
                     status: 'sent'
                 },
@@ -120,7 +119,7 @@ var app = new Vue({
     risposta() {
         this.contacts[this.index].messages.push(
             {
-                date: this.newdate,
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     message:'Buonasera Paolo :)' ,
                     status:'received',
              },
