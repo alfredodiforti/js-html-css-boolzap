@@ -6,6 +6,7 @@ var app = new Vue({
     data: {
         index: 0,
         message: '',
+        nome: '',
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -124,7 +125,19 @@ var app = new Vue({
                     status:'received',
              },
         )
-    }       
+    },
+    cerca() {
+        this.contacts.forEach((contact) => {
+            if (contact.name.toLowerCase().includes(this.nome.toLowerCase())) {
+                contact.visible = true;
+            }
+            else {
+                contact.visible = false;
+            }
+        })
+        
+    },
+    
     
 }
 });
